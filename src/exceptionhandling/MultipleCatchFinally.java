@@ -12,19 +12,19 @@ public class MultipleCatchFinally {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        A objA = new A();
-        B objB = new B();
+//        A objA = new A();
+//        B objB = new B();
 
         System.out.println("enter a value for x");
         try {
-            int x = sc.nextInt();
+            int x = sc.nextInt(); // 12r--->input mismatch
 //            index:      0  1    2
             int arr[] = {22,344,56};
-            int res = 10 / x;
+            int res = 10 / x; // 0----> AE
             System.out.println("value of res " + res);
             System.out.println("enter index: ");
-            int index = sc.nextInt();
-            System.out.println(arr[index]);
+            int index = sc.nextInt();//0,1,2,6
+            System.out.println(arr[index]);//6--> ArrayIOOB
         }
         catch(ArithmeticException e){
             System.out.println("1 eror is: "+e);
@@ -33,12 +33,21 @@ public class MultipleCatchFinally {
         {
             System.out.println("2 the error is:"+e);
 
-        }catch (Exception e){
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("exception is"+e);
+
+        }
+
+        catch (Exception e){
             System.out.println("3 error : "+e);
         }finally{
-//            sc.close();
+//            it is used to clean unused resources, objects
+            sc.close();
             System.out.println("I will execute always");
         }
+
 
 
         System.out.println("end of the prog");

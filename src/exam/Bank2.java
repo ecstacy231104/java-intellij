@@ -14,7 +14,7 @@ public class Bank2 {
     private int balance;
     private int depositingMoney;
 
-    Bank2(String dn,String ac)
+    public Bank2(String dn,String ac)
     {
         depositor_name = dn;
         ac_type = ac;

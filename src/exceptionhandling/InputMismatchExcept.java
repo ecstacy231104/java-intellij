@@ -10,7 +10,7 @@ public class InputMismatchExcept {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a value for x: ");
         try {
-            int x = sc.nextInt();
+            int x = sc.nextInt();//12r
             System.out.println("x: " + x);
         }
         catch(InputMismatchException e)

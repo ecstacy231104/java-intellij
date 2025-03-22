@@ -13,6 +13,8 @@ class Dog extends Animal {
     void m1(){
         System.out.println("m1 in dog class");
     }
+
+   @Override
     public void sound() {
         super.sound();
 
